@@ -1,0 +1,13 @@
+<h1>
+	{{titulo}}
+</h1>
+
+<p>
+  <input type="text" [(ngModel)]= "nombre"> 
+  
+  <button (click)="saluda()">Saluda</button>
+  <button (click)="despide()">Despide</button>
+  <button (click)="diAlgo('algo')">Dime algo</button>
+</p>
+
+<p>El nombre: {{nombre}}</p>
