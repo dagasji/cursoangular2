@@ -1,6 +1,9 @@
-<h1>
-	{{titulo}}
-</h1>
+<h1 [hidden]="ocultar">{{titulo}}</h1>
+
+<div *ngIf="ocultar">
+	Esto existe
+</div>
+
 
 <p>
   <input type="text" [(ngModel)]= "nombre"> 
@@ -8,6 +11,31 @@
   <button (click)="saluda()">Saluda</button>
   <button (click)="despide()">Despide</button>
   <button (click)="diAlgo('algo')">Dime algo</button>
+  <button (click)="cambiaVer()">Ocultar</button>
 </p>
 
 <p>El nombre: {{nombre}}</p>
+
+
+<ul>
+	<li *ngFor="let p of lista; let ind=index; let fondo=odd"
+		[style.background-color]="fondo ? 'LightBlue' : 'Lavender'">
+		{{ind}} {{p.nombre | capitalize}} ({{p.id}})
+	</li>
+</ul>
+
+<p>
+	Selecciona 
+	<select [(ngModel)]="idProvincia">
+		<option value="">--Elige opción</option>
+		<option *ngFor="let p of lista" [value]="p.id">{{p.nombre | capitalize}}</option>	
+	</select>
+	
+	Seleccionado: {{idProvincia}}
+	
+		<button (click)="addProvincia('cordoba')">Añade Cordoba</button>
+		<button (click)="addProvincia('huelva')">Añade Huelva</button>
+</p>
+
+
+

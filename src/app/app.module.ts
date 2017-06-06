@@ -15,11 +15,13 @@ import { LoggerService } from '../my-core/services/logger.service';
 // Componentes
 import { AppComponent } from './app.component';
 import { DemoComponent } from './demo/demo.component';
+import { CapitalizePipe } from '../my-core/pipes/capitalize.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DemoComponent
+    DemoComponent,
+    CapitalizePipe
   ],
   imports: [
     BrowserModule, MyCoreModule,FormsModule

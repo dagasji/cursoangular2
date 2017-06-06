@@ -12,6 +12,16 @@ export class DemoComponent implements OnInit {
     private titulo : string;
     private nombre : string;
     
+    private ocultar = false;
+    private lista = [
+        {id: 1, nombre : 'cadiz'},
+        {id: 2, nombre : 'Málaga'},
+        {id: 3, nombre : 'GRANADA'},
+        {id: 4, nombre : 'sevilla'},
+        ];
+    
+    private idProvincia = 3;
+    
     get Init() {
         return this.nombre;    
     }    
@@ -41,5 +51,15 @@ export class DemoComponent implements OnInit {
         this.titulo = `Dice ${algo}`;           
     }
     
+    public cambiaVer() {        
+        this.ocultar = !this.ocultar;        
+    }
+    
+    addProvincia(nombre : string) {
+        this.lista.push({id : (this.lista.length + 1), 
+                nombre : nombre})    
+        
+        this.idProvincia = this.lista.length;
+    }
 
 }
