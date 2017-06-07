@@ -1,0 +1,40 @@
+
+
+<table>
+	<tr>	
+		<td colspan="5">Total: {{acumulado}}</td>
+	</tr>
+	<tr>	
+		<td colspan="5">{{valorMostrado}}&nbsp;</td>
+	</tr>
+	<tr>
+		<td><button (click)="addNumero('7')">7</button></td>
+		<td><button (click)="addNumero('8')">8</button></td>
+		<td><button (click)="addNumero('9')">9</button></td>
+		<td><button (click)="addOperador(4)">/</button></td>
+	</tr>
+	<tr>
+		<td><button (click)="addNumero('4')">4</button></td>
+		<td><button (click)="addNumero('5')">5</button></td>
+		<td><button (click)="addNumero('6')">6</button></td>
+		<td><button (click)="addOperador(3)">*</button></td>
+	</tr>
+	<tr>
+		<td><button (click)="addNumero('1')">1</button></td>
+		<td><button (click)="addNumero('2')">2</button></td>
+		<td><button (click)="addNumero('3')">3</button></td>
+		<td><button (click)="addOperador(2)">-</button></td>
+	</tr>
+	<tr>
+		<td colspan="2"><button style="width:100%" (click)="addNumero('0')">0</button></td>		
+		<td><button (click)="addDecimal()" [disabled]="!decimalActivo">,&nbsp;</button></td>
+		<td><button (click)="addOperador(1)">+</button></td>
+	</tr>
+	<tr>
+		<td colspan="2"><button style="width:100%" (click)="total()">=</button></td>
+		<td><button (click)="limpiar()">C</button></td>
+	</tr>
+
+
+</table>
+

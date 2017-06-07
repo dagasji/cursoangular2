@@ -16,12 +16,14 @@ import { LoggerService } from '../my-core/services/logger.service';
 import { AppComponent } from './app.component';
 import { DemoComponent } from './demo/demo.component';
 import { CapitalizePipe } from '../my-core/pipes/capitalize.pipe';
+import { CalculadoraComponent } from './calculadora/calculadora.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DemoComponent,
-    CapitalizePipe
+    CapitalizePipe,
+    CalculadoraComponent
   ],
   imports: [
     BrowserModule, MyCoreModule,FormsModule
