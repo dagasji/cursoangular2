@@ -17,18 +17,27 @@ import { AppComponent } from './app.component';
 import { DemoComponent } from './demo/demo.component';
 import { CapitalizePipe } from '../my-core/pipes/capitalize.pipe';
 import { CalculadoraComponent } from './calculadora/calculadora.component';
+import { PersonasComponent } from './personas/personas.component';
+import { PersonasListComponent } from './personas/personas.component';
+import { PersonasFormComponent } from './personas/personas.component';
+import { PersonasViewComponent } from './personas/personas.component';
+import { PersonasViewModelService } from './personas/personas-view-model.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     DemoComponent,
     CapitalizePipe,
-    CalculadoraComponent
+    CalculadoraComponent,
+    PersonasComponent,
+    PersonasListComponent,
+    PersonasFormComponent,
+    PersonasViewComponent,
   ],
   imports: [
     BrowserModule, MyCoreModule,FormsModule
   ],
-  providers: [MasDatosService, DatosService, LoggerService],
+  providers: [MasDatosService, DatosService, LoggerService, PersonasViewModelService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,6 @@
+<h1>Mantenimiento de Personas</h1>
+
+<app-personas-list *ngIf="vm.modo == 'list'"></app-personas-list>
+<app-personas-form *ngIf="vm.modo == 'add' || vm.modo == 'edit'"></app-personas-form>
+<app-personas-view *ngIf="vm.modo == 'view'"></app-personas-view>
+

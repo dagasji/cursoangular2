@@ -18,7 +18,7 @@ export class AppComponent {
         this.title = datos.Titulo;
         this.log = log;
         
-        this.log.error('Sin implementar');
+        
     }
     
 }
